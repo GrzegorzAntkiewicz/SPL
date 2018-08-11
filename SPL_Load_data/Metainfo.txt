@@ -1,0 +1,14 @@
+
+Name of QuantLet: 'SPL_Load_data'
+
+Published in: 'Statistical programming languages - Student Project on ''A cross – country analysis on the interaction between child mortality and income'' '
+
+Description: 'Loads data of different extensions, merges and  prepares dataframes to be accessible and easy in use'
+
+Keywords: 'data frame, csv, excel, load, merge, prepare'
+
+Author: 'Klaas Miersch'
+
+Submitted: 'Sun, August 12 2018 by Klaas Miersch'
+
+Datafile: 'birthrate_worldbank.csv, Child_mortality.xlsx, GDP_PPP_constant_2011dollar.csv, population_worldbank.csv, swiid_2.rda'
