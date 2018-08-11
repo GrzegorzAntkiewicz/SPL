@@ -1,0 +1,205 @@
+data <- read.dta("Dataset_Bowling_Replication_JPE.dta")
+library(haven)
+Dataset_Bowling_Replication_JPE <- read_dta("C:/Users/Privat/Uni/Bachelorarbeit/Daten/Bowling_for_Facism/Dataset_Bowling_Replication_JPE.dta")
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+View(Dataset_Bowling_Replication_JPE)
+help()
+help(clear workspace)
+help(clearworkspace)
+??clearworkspace
+help(remove)
+remove(ls())
+remove(all)
+remove(list = ls())
+c = (1:8)^2; c
+?cbind
+data(iris)
+complete.cases(iris)
+DataFrame = DataFrame[TRUE,]
+new.iris = iris[TRUE,]
+new.iris
+new.iris = iris[FALSE,]
+new.iris
+new.iris = iris[,]
+new.iris
+new.iris = iris[]
+new.iris
+new.iris = iris[2,]
+new.iris
+DataFrame = DataFrame[(TRUE, FALSE, TRUE),]
+DataFrame = DataFrame[(TRUE FALSE TRUE)]
+new.iris = iris[(TRUE FALSE TRUE),]
+class(TRUE)
+class(complete.cases())
+class(complete.cases(iris))
+c(TRUE, FALSE, TRUE)
+new.iris = iris[c(TRUE, FALSE, TRUE),]
+new.iris
+new.iris = iris[1:150,]
+new.iris
+new.iris = iris[1:1:3:150,]
+new.iris
+new.iris = iris[1:150,]
+new.iris
+a = seq(1:150)
+a
+b = which(a != 2)
+b = which(a != 2);b
+new.iris = iris[!=2,]
+new.iris = iris[b,]
+new.iris
+###############################################################################
+# 4. Fibonacci: recursive function
+#    (a) set cases for first 2 numbers
+#    (b) and for general case
+#    (c) test on n=10
+###############################################################################
+u = c(numeric(10))
+###############################################################################
+# 4. Fibonacci: recursive function
+#    (a) set cases for first 2 numbers
+#    (b) and for general case
+#    (c) test on n=10
+###############################################################################
+u = c(numeric(10));u
+###############################################################################
+# 4. Fibonacci: recursive function
+#    (a) set cases for first 2 numbers
+#    (b) and for general case
+#    (c) test on n=10
+###############################################################################
+Fibonacci = function(a){
+if(y <= 2){ # condition for Fibonaci number 1 and 2
+Fib = 1 #Ergebnis in der Variable Fib speichern
+}
+else{
+Fib = 1/sqrt(5)*((1+sqrt(5))/2)^a
+}
+return(Fib) # make sure output is returned
+}
+#  (c)
+Fibonacci(10)
+###############################################################################
+# 4. Fibonacci: recursive function
+#    (a) set cases for first 2 numbers
+#    (b) and for general case
+#    (c) test on n=10
+###############################################################################
+Fibonacci = function(a){
+if(a <= 2){ # condition for Fibonaci number 1 and 2
+Fib = 1 #Ergebnis in der Variable Fib speichern
+}
+else{
+Fib = 1/sqrt(5)*((1+sqrt(5))/2)^a
+}
+return(Fib) # make sure output is returned
+}
+#  (c)
+Fibonacci(10)
+###############################################################################
+# 4. Fibonacci: recursive function
+#    (a) set cases for first 2 numbers
+#    (b) and for general case
+#    (c) test on n=10
+###############################################################################
+Fibonacci = function(a){
+if(a <= 2){ # condition for Fibonaci number 1 and 2
+Fib = 1 #Ergebnis in der Variable Fib speichern
+}
+else{
+Fib = round(1/sqrt(5)*((1+sqrt(5))/2)^a)
+}
+return(Fib) # make sure output is returned
+}
+#  (c)
+Fibonacci(10)
+#  (c)
+Fibonacci(3)
+#  (c)
+Fibonacci(200)
+#  (c)
+Fibonacci(50)
+26 * 38
+15^2*pi
+pi =15
+pi =15pi
+pi
+15^2*pi
+15^2*3.141
+26 * 38 (15^2*3.141)
+26 * 38 /(15^2*3.141)
+9^2*3.141
+10^2*3.141
+data("Titanic")
+Titanic
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+jahr <- seq(1901,2014)
+asyl <- data.frame(jahr)
+rownames(asyl) <- jahr
+asyl[90:113,"abschiebungen"] <- c(10850,13668,19821,47070,53043,36455,31761,38205,38479,32929,35444,27902,29036,26487,23334,17773,13894,9617,8394,7830,7558,7917,7651,10198)
+comment(asyl$abschiebungen) <- "Number of persons deported from Germany - - - Sources: 1990-2004 Bundespolizei; 2005- Migrationsbericht 2013"
+asyl[c(75,80,85,90:114),"asylberechtigte"] <- c(2928,12783,11224,6518,11597,9189,16396,25578,18100,14389,8443,5883,4114,3128,5716,2379,1534,960,411,251,304,233,452,643,652,740,919,2285)
+comment(asyl$asylberechtigte) <- "Sources: 1975,1980,1985,1990-2002 Bundesamt für die Anerkennung ausländischer Flüchtlinge, Nürnberg; 2003–2006 Statistisches Bundesamt; 2007– Aktuelle Zahlen zu Asyl 2015 (S.9) / ab 1994 nur Erstanträge"
+asyl[90:114,"asylsuchende"] <- c(193063,256112,438191,322599,127210,127937,116367,104353,98644,95113,78564,88278,71124,50563,35607,28914,21029,19164,22085,27649,41332,45741,64539,109580,173072)
+comment(asyl$asylsuchende) <- "Sources: Bundesamt für Migration: Migrationsbericht 2006, Aktuelle Zahlen zu Asyl 2015 (S.4)"
+plot(jahre,asyl$abschiebungen[90:114],ylim=c(0,175000),bty="l",yaxs="i",type="b",xlab=" ",ylab=" ",pch=16,lab=c(10,10,1),col="red",sub="Abschiebungen aus Deutschland",lwd=2)
+plot(jahr,asyl$abschiebungen[90:114],ylim=c(0,175000),bty="l",yaxs="i",type="b",xlab=" ",ylab=" ",pch=16,lab=c(10,10,1),col="red",sub="Abschiebungen aus Deutschland",lwd=2)
+# needed only for package installation or update
+library(devtools)
+devtools::install_github("lborke/yamldebugger")
+# load the package every time you want to use 'yamldebugger'
+library(yamldebugger)
+allKeywords
+"plot" %in% allKeywords
+# needed only for package installation or update
+install.packages(devtools)
+# needed only for package installation or update
+install.packages("devtools")
+library(devtools)
+devtools::install_github("lborke/yamldebugger")
+# load the package every time you want to use 'yamldebugger'
+library(yamldebugger)
+devtools::install_github("lborke/yamldebugger")
+# Set the working directory
+setwd("C:/Users/Privat/SPL/Code/R_Working")
+#List off all WHO regions
+who.regions = final.df$region_who
+who.regions = unique(who.regions)
+#Create regional dummies for all six WHO regions
+final.df$region_dummy_EMRO = ifelse(final.df$region_who == "EMRO",1,0)
+final.df$region_dummy_EURO = ifelse(final.df$region_who == "EURO",1,0)
+final.df$region_dummy_AFRO = ifelse(final.df$region_who == "AFRO",1,0)
+final.df$region_dummy_AMRO = ifelse(final.df$region_who == "AMRO",1,0)
+final.df$region_dummy_WPRO = ifelse(final.df$region_who == "WPRO",1,0)
+final.df$region_dummy_SEARO = ifelse(final.df$region_who == "SEARO",1,0)
+#Generate natural log of GDP with sapply
+final.df$ln_GDP_PPP_2010 = sapply(final.df$GDP_PPP_2010, log)
+#Estimate linear model with logaritmic child mortality as the dependend variable
+lreg1 = lm(final.df$ln_death_under_5_per_birth~final.df$ln_GDP_PPP_2010)
+lreg2 = lm(final.df$ln_death_under_5_per_birth
+~final.df$ln_GDP_PPP_2010
++final.df$region_dummy_AFRO
++final.df$region_dummy_AMRO
++final.df$region_dummy_EMRO
++final.df$region_dummy_EURO
++final.df$region_dummy_SEARO
++final.df$region_dummy_WPRO)
+#Create Latex table
+stargazer(lreg1, lreg2,
+title="Child Mortality and Income",
+align=TRUE, dep.var.labels=c("Children dead under 5(in percent)",
+"Children dead under 5(in percent)"),
+covariate.labels=c("log(GDP in 2010)",
+"WHO Region AFRO",
+"WHO Region AMRO",
+"WHO Region EMRO",
+"WHO Region EURO",
+"WHO Region SEARO",
+"WHO Region WPRO"),
+omit.stat=c("LL","ser","f"), no.space=TRUE)
