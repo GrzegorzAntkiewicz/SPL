@@ -1,0 +1,14 @@
+
+Name of QuantLet: 'SPL_Probability'
+
+Published in:     'Statistical programming languages - Student Project on ''A cross – country analysis on the interaction between child mortality and income'' '
+
+Description:      'Depicts the distribution of probability of dying before reaching the age of 5 in every WHO region in form of a box plot and depicts the probability in every country on a world map'
+
+Keywords:         'map, probability, box plot, mortality, children, world, death'
+
+Author:           'Grzegorz Antkiewicz'
+
+Submitted:        'Sun, August 12 2018 by Grzegorz Antkiewicz'
+
+Datafile :        'Probability1.pdf, Probability2.pdf'
