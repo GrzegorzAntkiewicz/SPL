@@ -2,7 +2,12 @@
 
 setwd("C:/Users/Privat/SPL/Code/R_Working")
 
-install.packages("stargazer")
+#The stargazer package is needed to produce nice LaTex tables
+
+if (any(grepl("stargazer", installed.packages())) == FALSE){
+  install.packages("stargazer")
+  }
+
 library(stargazer)
 
 #List off all WHO regions
@@ -25,8 +30,19 @@ final.df$ln_GDP_PPP_2010 = sapply(final.df$GDP_PPP_2010, log)
 
 #Estimate linear model with logaritmic child mortality as the dependend variable
 
-lreg1 = lm(final.df$ln_death_under_5_per_birth~final.df$ln_GDP_PPP_2010)
-lreg2 = lm(final.df$ln_death_under_5_per_birth
+lreg1 = lm(final.df$death_under_5_per_birth~final.df$ln_GDP_PPP_2010)
+
+#Add the gini coefficient and the birthrate as control 
+#variables
+
+lreg2 = lm(final.df$death_under_5_per_birth
+           ~final.df$ln_GDP_PPP_2010
+           +final.df$gini_disp
+           +final.df$birthrate_2010)
+
+#Control for region dummies
+          
+lreg3 = lm(final.df$death_under_5_per_birth
            ~final.df$ln_GDP_PPP_2010
            +final.df$region_dummy_AFRO
            +final.df$region_dummy_AMRO
@@ -35,13 +51,30 @@ lreg2 = lm(final.df$ln_death_under_5_per_birth
            +final.df$region_dummy_SEARO
            +final.df$region_dummy_WPRO)
 
+#Controlled for the gini coefficient and the birthrate,
+#As well as for the region dummies
+
+lreg4 = lm(final.df$death_under_5_per_birth
+            ~final.df$ln_GDP_PPP_2010
+            +final.df$gini_disp
+            +final.df$birthrate_2010
+            +final.df$region_dummy_AFRO
+            +final.df$region_dummy_AMRO
+            +final.df$region_dummy_EMRO
+            +final.df$region_dummy_EURO
+            +final.df$region_dummy_SEARO
+            +final.df$region_dummy_WPRO)
+
 #Create Latex table
 
-stargazer(lreg1, lreg2,
-          title="Child Mortality and Income",
-          align=TRUE, dep.var.labels=c("Children dead under 5(in percent)",
-                                       "Children dead under 5(in percent)"),
+stargazer(lreg1, lreg2, lreg3, lreg4,
+          title="Child Mortality and Income", 
+          out = "C:/Users/Privat/SPL/Code/R_Working/reg_table.tex",
+          out.header = TRUE,
+          align=TRUE, dep.var.labels=c("Children dead under 5(in percent)"),
           covariate.labels=c("log(GDP in 2010)",
+                             "Gini Coefficient in 2010",
+                             "Birthrate in 2010",
                              "WHO Region AFRO",
                              "WHO Region AMRO",
                              "WHO Region EMRO",
