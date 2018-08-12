@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{dcolumn}
+
+\begin{document}
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: So, Aug 12, 2018 - 16:14:42
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{Child Mortality and Income} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Children dead under 5(in percent)} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+\hline \\[-1.8ex] 
+ log(GDP in 2010) & -2.802^{***} & -0.944^{***} & -1.994^{***} & -0.997^{***} \\ 
+  & (0.180) & (0.284) & (0.213) & (0.286) \\ 
+  Gini Coefficient in 2010 &  & -0.048^{**} &  & -0.045 \\ 
+  &  & (0.024) &  & (0.030) \\ 
+  Birthrate in 2010 &  & 0.258^{***} &  & 0.193^{***} \\ 
+  &  & (0.032) &  & (0.039) \\ 
+  WHO Region AFRO &  &  & 4.354^{***} & 2.759^{***} \\ 
+  &  &  & (0.784) & (0.788) \\ 
+  WHO Region AMRO &  &  & 0.527 & 0.828 \\ 
+  &  &  & (0.744) & (0.702) \\ 
+  WHO Region EMRO &  &  & 3.123^{***} & 2.085^{**} \\ 
+  &  &  & (0.880) & (0.826) \\ 
+  WHO Region EURO &  &  & 0.681 & 0.848 \\ 
+  &  &  & (0.707) & (0.691) \\ 
+  WHO Region SEARO &  &  & 0.847 & 1.619^{*} \\ 
+  &  &  & (0.969) & (0.898) \\ 
+  WHO Region WPRO &  &  &  &  \\ 
+  &  &  &  &  \\ 
+  Constant & 29.423^{***} & 8.700^{**} & 20.359^{***} & 9.082^{**} \\ 
+  & (1.662) & (3.429) & (2.072) & (3.601) \\ 
+ \hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{127} & \multicolumn{1}{c}{127} & \multicolumn{1}{c}{127} & \multicolumn{1}{c}{127} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.659} & \multicolumn{1}{c}{0.783} & \multicolumn{1}{c}{0.762} & \multicolumn{1}{c}{0.806} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.657} & \multicolumn{1}{c}{0.777} & \multicolumn{1}{c}{0.750} & \multicolumn{1}{c}{0.793} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\multicolumn{4}{r}{Standard errors in paranthesis.}
+\multicolumn{4}{r}{Data source as described in "1. Quantlet: SPL\_Load\_data}
+\end{tabular}
+	\quantnet \href{https://github.com/GrzegorzAntkiewicz/SPL_2018/tree/master/SPL_Load_data}{SPL\_Load\_data}
+	\quantnet \href{https://github.com/GrzegorzAntkiewicz/SPL_2018/tree/master/SPL_Probability}{SPL\_Regression} 
+\end{table} 
+\end{document}
+
