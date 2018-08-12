@@ -1,7 +1,3 @@
-#TODO:  - Add worldbankdata "birth attended by professional health staff
-#       - Add geography variables
-
-
 # Set the working directory
 
 setwd("C:/Users/Privat/SPL/Code/R_Working")
@@ -25,7 +21,7 @@ library(countrycode)
 library(readxl)
 
 #Remark: Downloaded File had to be modified slightly before reading, in
-#because otherwise it would have been imposible to use it due to a formatting
+#because otherwise it would have been imposible to use it due to an excel formatting
 #error
 
 chm <- read_excel("Child_Mortality.xlsx", 
@@ -80,9 +76,6 @@ names(birthrate.2010)[1] =  "birthrate_2010"
 #Download at https://data.worldbank.org
 #All Datafiles which are available for Download in the Worldbank Database can be 
 #read in with this command
-
-#TODO: hieraus noch eine Funktion basteln um beide Datensätze über die Funktion
-#einlesen zu können
 
 gdp.ppp <- read.csv("GDP_PPP_constant_2011dollar.csv",
                     skip = 4, 
